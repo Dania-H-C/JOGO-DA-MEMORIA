@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jogo da Memória</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>Jogo da Memória</h1>
+      <p class="sub">Encontre os 8 pares com o menor número de jogadas.</p>
+    </div>
+    <button class="theme" id="theme" aria-label="Alternar tema claro e escuro">◐</button>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><span>Jogadas</span><b id="moves">0</b></div>
+    <div class="stat"><span>Tempo</span><b id="time">0:00</b></div>
+    <div class="stat"><span>Recorde</span><b id="best">–</b></div>
+  </div>
+
+  <div class="board" id="board" aria-label="Tabuleiro de cartas"></div>
+
+  <div class="actions"><button class="btn" id="restart">Novo jogo</button></div>
+</main>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="win-title">
+  <div class="modal">
+    <h2 id="win-title">Você venceu!</h2>
+    <p id="win-text"></p>
+    <p id="win-best"></p>
+    <button class="btn" id="again">Jogar de novo</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
